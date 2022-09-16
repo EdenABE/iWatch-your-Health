@@ -1,7 +1,7 @@
 {
-  "name": "crowd-funding",
+  "name": "iWatch-your-Health",
   "version": "1.0.0",
-  "description": "",
+  "description": "This application will help you identify the necessary screening tests and vaccines that are appropriate for your age and sex.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
     "seed": "node seeds/seed.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Andrew, Daniel and Eden",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.0",
