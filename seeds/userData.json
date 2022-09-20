@@ -2,16 +2,22 @@
   {
     "name": "Eden",
     "email": "eden@hotmail.com",
-    "password": "password12345"
+    "password": "password12345",
+    "Age": "45",
+    "Sex": "F"
   },
   {
     "name": "Daniel",
     "email": "daniel@gmail.com",
-    "password": "password12345"
+    "password": "password12345",
+    "Age": "50",
+    "Sex": "M"
   },
   {
     "name": "Andrew",
     "email": "andrew@aol.com",
-    "password": "password12345"
+    "password": "password12345",
+    "Age": "65",
+    "Sex": "M"
   }
 ]
