@@ -1,24 +1,102 @@
-<!-- Loop over each object in the projects array -->
-{{#each projects as |project| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
-      <a href="/project/{{project.id}}">{{project.name}}</a>
-    </h2>
-    <p>
-      <span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount">{{format_amount project.needed_funding}}</span>
-      needed!
-    </p>
-    <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
+<html lang="">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Group project 2</title>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Staatliches&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+
+    <main class="container">
+      <header>
+  <div class="container" style="font-family: 'Staatliches', cursive;">
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/landing">
+          <img src="data:image/png;base64,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" alt="Red cross q" />
+        </a>
+
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+
+          <a class="navbar-item" href="/">
+            Home
+          </a>
+          </a>
+
+            <a class="navbar-item" href="C:\Users\arm10\OneDrive\Desktop\coding bootcamp\New folder\VU-VIRT-FSF-PT-05-2022-U-LOLC-main-15-Project-2-02-Challenge\15-Project-2\login.html">
+              Login
+            </a>
+
+            <a class="navbar-item" href="C:\Users\arm10\OneDrive\Desktop\coding bootcamp\New folder\VU-VIRT-FSF-PT-05-2022-U-LOLC-main-15-Project-2-02-Challenge\15-Project-2\Registration.html">
+              Register
+            </a>
+
+          <a class="navbar-item" href="C:\Users\arm10\OneDrive\Desktop\coding bootcamp\New folder\VU-VIRT-FSF-PT-05-2022-U-LOLC-main-15-Project-2-02-Challenge\15-Project-2\games.html">
+            About
+          </a>
+
+        </div>
+      </div>
+    </nav>
+
   </div>
-  <div class="col-md-7">
-    <p>
-      {{project.description}}
-    </p>
-  </div>
-</div>
-{{/each}}
+
+</header>
+
+<script src="./js/navbar.js"></script>
+    <section>
+        <div class="container">
+            <div class="image is-fullwidth">
+                <figure class="image">
+                    <img src="https://previews.123rf.com/images/28fotocom/28fotocom1604/28fotocom160400028/55939633-logo-of-pink-medical-centre-logo-rose-tree-located-on-two-people-with-shadow-medical-symbol.jpg" alt="Red cross">
+                </figure>
+            </div>
+            <div class="content is-overlay py-6">
+                <br/><br/><br/><br/><br/>
+                <div class="hero is-success is-flex">
+               
+                </div>
+            </div>
+        </div>
+
+    </section>
+    </main>
+
+  </body>
+
+</html>
