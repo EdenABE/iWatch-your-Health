@@ -11,21 +11,21 @@ Screening.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      references: {
-        model: 'user',
-        key: 'name',
-      },
-    },
-    Age: {
+    min_age: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    Sex: {
-      type: DataTypes.ENUM,
-      values: ['M', 'F'],
+    max_age: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    isMale: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
+    },
+    isFemale: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
     },
     needed_screening: {
       type: DataTypes.STRING,
@@ -35,11 +35,6 @@ Screening.init(
     },
     description: {
       type: DataTypes.STRING,
-    },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
     },
     user_id: {
       type: DataTypes.INTEGER,
