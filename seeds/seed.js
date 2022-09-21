@@ -7,17 +7,8 @@ const screeningData = require('./screeningData.json');
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  const users = await User.bulkCreate(userData, {
-    individualHooks: true,
-    returning: true,
-  });
-
-  for (const Screening of screeningData) {
-    await Screening.create({
-      ...Screening,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-    });
-  }
+  await Screening.bulkCreate(screeningData);
+  await User.bulkCreate(userData);
 
   process.exit(0);
 };
