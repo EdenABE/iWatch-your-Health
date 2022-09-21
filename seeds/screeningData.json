@@ -1,63 +1,71 @@
 [
   {
-    "Age": [19,39],
-    "Sex": "M, F",
+    "minAge": 19,
+    "maxAge": 39,
+    "isMale": true,
+    "isFemale": true,
     "needed_screening": "screening for obesity, depression, alcohol use, tocacco use, seat belt use and smoke detector use every doctor visit, Blood pressure screening every year, cholesterol screening every 5 years, Diabetes screening, Dental exam, Eye exam, Additional screening tests can be recommended by your doctor based on your past or present family history.",
     "needed_vaccination": "Yearly flu shot, 2 doses of varicella vaccine , 2 doses of Measles, mumps and rubella combination vaccine, 1 dose of Tetanus, diphtheria and pertusis combination vaccine every 10 years, 2 to 3 Human papillomavirus vaccine depending on age of initiation and 2 to 4 Hepatitis B vaccine based on vaccine or condition. Sometimes vaccination status can be established using blood work. Other vaccinations can be recommended by your doctor based on your blood work or based on your past and present medical history. There might be more than one formulation for the same vaccine and your doctor will choose the appropriate vaccine type based on your medical conditions.",
     "description": "Blood pressure is measured using a blood pressure measuring cuff called sphygmomanometer and a stethoscope. Cholesterol and diabetes is screened using blood work called lipid profile and hemoglobin A1C respectively."
   },
   {
-    "Age": [40,49],
-    "Sex": "F",
+    "minAge": 40,
+    "maxAge": 49,
+    "isFemale": true,
     "needed_screening": "screening for obesity, depression, alcohol use, tocacco use, seat belt use and smoke detector use every doctor visit, Blood pressure screening every year, cholesterol screening every 5 years, Diabetes screening yearly, Dental exam yearly, Eye exam yearly and optional biennial mammography for breast cancer screening. Additional screening tests can be recommended by your doctor based on your past or present family history.",
     "needed_vaccination": "Yearly flu shot, 2 doses of varicella vaccine , 2 doses of Measles, mumps and rubella combination vaccine, 1 dose of Tetanus, diphtheria and pertusis combination vaccine every 10 years, 2 to 3 Human papillomavirus vaccine depending on age of initiation and 2 to 4 Hepatitis B vaccine based on vaccine or condition. Sometimes vaccination status can be established using blood work. Other vaccinations can be recommended by your doctor based on your blood work or based on your past and present medical history. There might be more than one formulation for the same vaccine and your doctor will choose the appropriate vaccine type based on your medical conditions.",
     "description": "Blood pressure is measured using a blood pressure measuring cuff called sphygmomanometer and a stethoscope. Cholesterol and diabetes is screened using blood work called lipid profile and hemoglobin A1C respectively."
   },
   {
-    "Age": [40,49],
-    "Sex": "M",
+    "minAge": 40,
+    "maxAge": 49,
+    "isMale": true,
     "needed_screening": "screening for obesity, depression, alcohol use, tocacco use, seat belt use and smoke detector use every doctor visit, Blood pressure screening every year, cholesterol screening every 5 years, Diabetes screening, Dental exam, Eye exam, Additional screening tests can be recommended by your doctor based on your past or present family history.",
     "needed_vaccination": "Yearly flu shot, 2 doses of varicella vaccine , 2 doses of Measles, mumps and rubella combination vaccine, 1 dose of Tetanus, diphtheria and pertusis combination vaccine every 10 years, 2 to 3 Human papillomavirus vaccine depending on age of initiation and 2 to 4 Hepatitis B vaccine based on vaccine or condition. Sometimes vaccination status can be established using blood work. Other vaccinations can be recommended by your doctor based on your blood work or based on your past and present medical history. There might be more than one formulation for the same vaccine and your doctor will choose the appropriate vaccine type based on your medical conditions.",
     "description": "Blood pressure is measured using a blood pressure measuring cuff called sphygmomanometer and a stethoscope. Cholesterol and diabetes is screened using blood work called lipid profile and hemoglobin A1C respectively."
   },
   {
-    "Age": [50,64],
-    "Sex": "F",
+    "minAge": 50,
+    "maxAge": 64,
+    "isFemale": true,
     "needed_screening": "screening for obesity, depression, alcohol use, tocacco use, seat belt use and smoke detector use every doctor visit, Blood pressure screening every year, cholesterol screening every 5 years, Diabetes screening yearly, Dental exam yearly, Eye exam yearly and biennial mammography for breast cancer screening. Additional screening tests can be recommended by your doctor based on your past or present family history.",
     "needed_vaccination": "Yearly flu shot, 2 doses of varicella vaccine , 2 doses of Measles, mumps and rubella combination vaccine, 1 dose of Tetanus, diphtheria and pertusis combination vaccine every 10 years, 2 to 3 Human papillomavirus vaccine depending on age of initiation and 2 to 4 Hepatitis B vaccine based on vaccine or condition. Sometimes vaccination status can be established using blood work. Other vaccinations can be recommended by your doctor based on your blood work or based on your past and present medical history. There might be more than one formulation for the same vaccine and your doctor will choose the appropriate vaccine type based on your medical conditions.",
     "description": "Blood pressure is measured using a blood pressure measuring cuff called sphygmomanometer and a stethoscope. Cholesterol and diabetes is screened using blood work called lipid profile and hemoglobin A1C respectively."
   },
   {
-    "Age": [50,64],
-    "Sex": "M",
+    "minAge": 50,
+    "maxAge": 64,
+    "isMale": true,
     "needed_screening": "screening for obesity, depression, alcohol use, tocacco use, seat belt use and smoke detector use every doctor visit, Blood pressure screening every year, cholesterol screening every 5 years, Diabetes screening, Dental exam, Eye exam, Additional screening tests can be recommended by your doctor based on your past or present family history.",
     "needed_vaccination": "Yearly flu shot, 2 doses of varicella vaccine , 2 doses of Measles, mumps and rubella combination vaccine, 1 dose of Tetanus, diphtheria and pertusis combination vaccine every 10 years, 2 to 3 Human papillomavirus vaccine depending on age of initiation and 2 to 4 Hepatitis B vaccine based on vaccine or condition. Sometimes vaccination status can be established using blood work. Other vaccinations can be recommended by your doctor based on your blood work or based on your past and present medical history. There might be more than one formulation for the same vaccine and your doctor will choose the appropriate vaccine type based on your medical conditions.",
     "description": "Blood pressure is measured using a blood pressure measuring cuff called sphygmomanometer and a stethoscope. Cholesterol and diabetes is screened using blood work called lipid profile and hemoglobin A1C respectively."
   },
   {
-    "Age": "65",
-    "Sex": "F",
+    "minAge": 65,
+    "isFemale": true,
     "needed_screening": "screening for obesity, depression, alcohol use, tocacco use, seat belt use and smoke detector use every doctor visit, Blood pressure screening every year, cholesterol screening every 5 years, Diabetes screening, Dental exam, Eye exam, Additional screening tests can be recommended by your doctor based on your past or present family history.",
     "needed_vaccination": "Yearly flu shot, 2 doses of varicella vaccine , 2 doses of Measles, mumps and rubella combination vaccine, 1 dose of Tetanus, diphtheria and pertusis combination vaccine every 10 years, 2 to 3 Human papillomavirus vaccine depending on age of initiation and 2 to 4 Hepatitis B vaccine based on vaccine or condition. Sometimes vaccination status can be established using blood work. Other vaccinations can be recommended by your doctor based on your blood work or based on your past and present medical history. There might be more than one formulation for the same vaccine and your doctor will choose the appropriate vaccine type based on your medical conditions.",
     "description": "Blood pressure is measured using a blood pressure measuring cuff called sphygmomanometer and a stethoscope. Cholesterol and diabetes is screened using blood work called lipid profile and hemoglobin A1C respectively."
   },
   {
-    "Age": "65",
-    "Sex": "M",
+    "minAge": 65,
+    "isMale": true,
     "needed_screening": "",
     "needed_vaccination": "",
     "description": "A mobile app that will send you notifications whenever a concert is playing in your area."
   },
   {
-    "Age": [67,85],
-    "Sex": "M",
+    "minAge": 66,
+    "maxAge": 85,
+    "isMale": true,
     "needed_screening": "",
     "needed_vaccination": "",
     "description": "A mobile app that will send you notifications whenever a concert is playing in your area."
   },
   {
-    "Age": [67,85],
-    "Sex": "F",
+    "minAge": 66,
+    "maxAge": 85,
+    "isFemale": true,
     "needed_screening": "",
     "needed_vaccination": "",
     "description": "A mobile app that will send you notifications whenever a concert is playing in your area."

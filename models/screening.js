@@ -14,6 +14,10 @@ Screening.init(
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      references: {
+        model: 'user',
+        key: 'name',
+      },
     },
     Age: {
       type: DataTypes.INTEGER,
