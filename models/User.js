@@ -35,6 +35,15 @@ User.init(
         len: [8],
       },
     },
+    age: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    sex: {
+      type: DataTypes.ENUM,
+      values: ['M', 'F'],
+      allowNull: false,
+    },
   },
   {
     hooks: {
