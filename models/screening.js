@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const User = require('./User');
 
 class Screening extends Model {}
 
@@ -17,7 +18,7 @@ Screening.init(
     },
     max_age: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     isMale: {
       type: DataTypes.BOOLEAN,
@@ -28,14 +29,21 @@ Screening.init(
       allowNull: true,
     },
     needed_screening: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
     },
     needed_vaccination: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
     },
     description: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
     },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "user",
+        key: "id"
+      }
+    }
   },
   {
     sequelize,

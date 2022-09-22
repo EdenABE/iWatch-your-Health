@@ -9,20 +9,20 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['name'],
         },
       ],
     });
 
     // Serialize data so the template can read it
     const screenings = screeningData.map((Screening) => Screening.get({ plain: true }));
-
+    console.log(screenings);
     // Pass serialized data and session flag into template
     res.render('homepage', {
       screenings,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });

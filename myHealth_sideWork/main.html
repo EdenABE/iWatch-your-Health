@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/ico" href="/public/pictures/healthcarepalnav.png"/>
+    <link rel="icon" type="image/ico" href="healthcarepalnav.png"/>
     <title>myHealth</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
             <nav class="navbar navbar-expand-lg bg-light">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">
-                      <img src="/public/pictures/Screen Shot 2022-09-21 at 09.39.01.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                      <img src="Screen Shot 2022-09-21 at 09.39.01.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                       myHealth
                     </a>
                 </div>
@@ -25,16 +25,15 @@
     </div>
     {{#if loggedIn}}
         {{{ body }}}
-        
     {{else}}
     <nav class="buttons_general">
         <button class="btn btn-outline-dark btnIndividual" href="/login.html">
             <div>Login</div>
-            <img src="/public/pictures/Screen Shot 2022-09-21 at 09.39.01.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            <img src="Screen Shot 2022-09-21 at 09.39.01.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
         </button>
         <button class="btn btn-outline-dark btnIndividual" href="/signup">
             <div class="container-md">Signup</div>
-            <img src="/public/pictures/Screen Shot 2022-09-21 at 09.39.01.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            <img src="Screen Shot 2022-09-21 at 09.39.01.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
         </button>
     </nav>
     {{/if}}
