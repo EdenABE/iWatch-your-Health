@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Screening, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth ,async (req, res) => {
   try {
     // Get all Screenings and JOSIN with user data
     const screeningData = await Screening.findAll({
@@ -75,8 +75,12 @@ router.get('/login', (req, res) => {
     res.redirect('/profile');
     return;
   }
-
   res.render('login');
 });
+
+
+router.get('/signup', (req, res) => {
+  res.render('signup');
+})
 
 module.exports = router;
