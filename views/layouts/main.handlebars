@@ -24,7 +24,8 @@
       </header>
     </div>
        {{{ body }}}
-    {{#unless loggedIn}}
+
+    {{#if loggedIn}}
           
     <nav class="buttons_general">
         <a class="btn btn-outline-dark btnIndividual" href="/login">
@@ -36,6 +37,6 @@
             <img src="/public/pictures/Screen Shot 2022-09-21 at 09.39.01.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
         </a>
     </nav>
-    {{/unless}}
+    {{/if}}
 </body>
 </html>
