@@ -15,6 +15,27 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+router.put('/', async (req, res) => {
+  const updatedscreening = await Screening.update(
+    {
+      minAge: req.body.minAge,
+      maxAge: req.body.author,
+      isMale: req.body.isMale,
+      isFemale: req.body.isFemale,
+      needed_screening: req.body.needed_screening,
+      needed_vaccination: req.body.needed_vaccination,
+      description: req.body.description,
+    },
+    {
+      where: {
+        book_id: req.params.book_id,
+      },
+    }
+  );
+
+  res.json(updatedscreening);
+});
+
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const screeningData = await Screening.destroy({
@@ -25,7 +46,9 @@ router.delete('/:id', withAuth, async (req, res) => {
     });
 
     if (!screeningData) {
-      res.status(404).json({ message: 'No Screening information found with this id!' });
+      res
+        .status(404)
+        .json({ message: 'No Screening information found with this id!' });
       return;
     }
 
