@@ -23,20 +23,19 @@
             </nav>
       </header>
     </div>
-    {{#if loggedIn}}
-        {{{ body }}}
-        
-    {{else}}
+       {{{ body }}}
+    {{#unless loggedIn}}
+          
     <nav class="buttons_general">
-        <button class="btn btn-outline-dark btnIndividual" href="/login.html">
+        <a class="btn btn-outline-dark btnIndividual" href="/login">
             <div>Login</div>
             <img src="/public/pictures/Screen Shot 2022-09-21 at 09.39.01.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-        </button>
-        <button class="btn btn-outline-dark btnIndividual" href="/signup">
+        </a>
+        <a class="btn btn-outline-dark btnIndividual" href="/signup">
             <div class="container-md">Signup</div>
             <img src="/public/pictures/Screen Shot 2022-09-21 at 09.39.01.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-        </button>
+        </a>
     </nav>
-    {{/if}}
+    {{/unless}}
 </body>
 </html>

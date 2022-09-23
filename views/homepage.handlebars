@@ -9,8 +9,8 @@
                   <div class="card">
                     <div class="card-body">
                       <h5 class="card-title">We think you should receive the next screenings:</h5>
-                      {{#each}}
-                      <p class="card-text">${needed_screening}</p>
+                      {{#each screenings}}
+                      <p class="card-text">{{needed_screening}}</p>
                       {{/each}}
                     </div>
                   </div>
@@ -19,8 +19,8 @@
                   <div class="card">
                     <div class="card-body">
                       <h5 class="card-title">We think you should receive the next vaccinations:</h5>
-                      {{#each}}
-                      <p class="card-text">${needed_vaccination}</p>
+                      {{#each screenings}}
+                      <p class="card-text">{{needed_vaccination}}</p>
                       {{/each}}
                     </div>
                   </div>
