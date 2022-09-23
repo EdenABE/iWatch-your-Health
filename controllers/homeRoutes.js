@@ -75,9 +75,9 @@ router.get('/login', (req, res) => {
     res.redirect('/profile');
     return;
   }
-
   res.render('login');
 });
+
 
 router.get('/signup', (req, res) => {
   res.render('signup');
