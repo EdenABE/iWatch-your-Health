@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/ico" href="/public/pictures/healthcarepalnav.png"/>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/ico" href="/pictures/healthcarepalnav.png"/>
     <title>myHealth</title>
 </head>
 <body>
@@ -15,8 +15,8 @@
         <header>
             <nav class="navbar navbar-expand-lg bg-light">
                 <div class="container-fluid">
+                    <img src="/pictures/Screen Shot 2022-09-21 at 09.39.01.png" alt="Logo" width="30" height="24" class="myHealthPic">
                     <a class="navbar-brand" href="#">
-                      <img src="/public/pictures/Screen Shot 2022-09-21 at 09.39.01.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                       myHealth
                     </a>
                 </div>
@@ -25,18 +25,37 @@
     </div>
        {{{ body }}}
 
-    {{#if loggedIn}}
-          
     <nav class="buttons_general">
         <a class="btn btn-outline-dark btnIndividual" href="/login">
             <div>Login</div>
-            <img src="/public/pictures/Screen Shot 2022-09-21 at 09.39.01.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            <img src="/pictures/Screen Shot 2022-09-21 at 09.39.01.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
         </a>
         <a class="btn btn-outline-dark btnIndividual" href="/signup">
             <div class="container-md">Signup</div>
-            <img src="/public/pictures/Screen Shot 2022-09-21 at 09.39.01.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            <img src="/pictures/Screen Shot 2022-09-21 at 09.39.01.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
         </a>
     </nav>
-    {{/if}}
+
+  {{#if loggedIn}}
+      <nav class="buttons_general">
+        <a class="btn btn-outline-dark btnIndividual" href="/logout">
+            <div>Log Out</div>
+            <img src="/pictures/Screen Shot 2022-09-21 at 09.39.01.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        </a>
+
+        <div hidden>
+    <nav class="buttons_general">
+        <a class="btn btn-outline-dark btnIndividual" href="/login">
+            <div>Login</div>
+            <img src="/pictures/Screen Shot 2022-09-21 at 09.39.01.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        </a>
+        <a class="btn btn-outline-dark btnIndividual" href="/signup">
+            <div class="container-md">Signup</div>
+            <img src="/pictures/Screen Shot 2022-09-21 at 09.39.01.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        </a>
+    </nav>
+        </div>
+
+     {{/if }}
 </body>
 </html>
