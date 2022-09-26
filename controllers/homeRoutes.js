@@ -2,22 +2,36 @@ const router = require('express').Router();
 const { Screening, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', withAuth ,async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
-    // Get all Screenings and JOSIN with user data
+    // Get all Screenings and JOIN with user data
     const screeningData = await Screening.findAll({
+      where: {
+        attr1: {
+          gte: 'min_age',
+        },
+        attr2: {
+          lte: 'max_age',
+        },
+        attr3: {
+          in: ['M', 'F'],
+        },
+      },
       include: [
         {
           model: User,
+          attributes: ['name', 'age'],
         },
       ],
     });
 
     // Serialize data so the template can read it
-    const screenings = screeningData.map((Screening) => Screening.get({ plain: true }));
+    const screenings = screeningData.map((Screening) =>
+      Screening.get({ plain: true })
+    );
     console.log(screenings);
     // Pass serialized data and session flag into template
-    res.render('homepage', {
+    res.render('profile', {
       screenings,
       logged_in: req.session.logged_in,
     });
@@ -78,9 +92,8 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-
-router.get('/signup', (req, res) => {
-  res.render('signup');
-})
+router.get('/login', (req, res) => {
+  res.render('login');
+});
 
 module.exports = router;

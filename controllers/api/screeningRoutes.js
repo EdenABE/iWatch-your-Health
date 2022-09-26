@@ -28,7 +28,7 @@ router.put('/', async (req, res) => {
     },
     {
       where: {
-        book_id: req.params.book_id,
+        id: req.params.id,
       },
     }
   );
