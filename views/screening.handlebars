@@ -1,0 +1,112 @@
+<div class='row'>
+  <div class='col-auto'>
+    <h2>Welcome, {{name}}!</h2>
+    <p>Please don't change the current document unless you are authorized to do
+      so!</p>
+  </div>
+</div>
+
+<div class='row mt-4'>
+  <div class='col-md-6'>
+    <h3>Create or Update screening guidelines here:</h3>
+
+    <form class='form screening-form'>
+      <div class='form-group'>
+        <label for='id'>screening id:</label>
+        <input
+          class='form-input'
+          type='text'
+          id='id'
+          name='screening-id'
+        />
+      </div>
+      <div class='form-group'>
+        <label for='min_age'>minimum age :</label>
+        <input
+          class='form-input'
+          type='number'
+          id='min_age'
+          name='minimum-age'
+        />
+      </div>
+      <div class='form-group'>
+        <label for='max_age'>maximum age :</label>
+        <input
+          class='form-input'
+          type='number'
+          id='max_age'
+          name='maximum-age'
+        />
+      </div>
+      <div class='form-group'>
+        <label for='isMale'>male sex:</label>
+        <select
+          class='form-input'
+          id='isMale'
+          name='male sex'
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        ></select>
+      </div>
+      <div class='form-group'>
+        <label for='isFemale'>female sex:</label>
+        <select
+          class='form-input'
+          id='isFemale'
+          name='female sex'
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        ></select>
+      </div>
+      <div class='form-group'>
+        <label for='needed_screening'>screening recommendations:</label>
+        <textarea
+          class='form-input'
+          id='needed_screening'
+          name='screening recommendations'
+        ></textarea>
+      </div>
+      <div class='form-group'>
+        <label for='needed_vaccination'>vaccination recommendations:</label>
+        <textarea
+          class='form-input'
+          id='needed_vaccination'
+          name='vaccination recommendations'
+        ></textarea>
+      </div>
+      <div class='form-group'>
+        <label for='recommendation-description'>description:</label>
+        <textarea
+          class='form-input'
+          id='description'
+          name='description'
+        ></textarea>
+      </div>
+      <div class='form-group'>
+        <button type='submit' class='btn btn-primary'>Create</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if screening.length}}
+    <div class='col-md-6 project-list'>
+      <h3>Current screenings:</h3>
+
+      {{#each screening as |screening|}}
+        <div class='row mb-2'>
+          <div class='col-md-8'>
+            <h4><a href='/screening/{{screening.id}}'>{{screening.id}}</a></h4>
+          </div>
+          <div class='col-md-4'>
+            <button
+              class='btn btn-sm btn-danger'
+              data-id='{{screening.id}}'
+            >DELETE</button>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+</div>
+
+<script src='./js/screening.js'></script>
