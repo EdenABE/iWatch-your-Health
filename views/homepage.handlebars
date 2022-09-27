@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <nav class="profileBody">
     <h1> Welcome! {{name}}</h1>
     <br>
@@ -47,3 +48,47 @@
             <img src="/pictures/Screen Shot 2022-09-21 at 09.39.01.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
         </a>
 
+=======
+<nav class='profileBody'>
+  <h1> Welcome! {{name}}</h1>
+  <br />
+  <h2>Given you are ${{age}} years old and you are a {{sex}}</h2>
+  <br />
+  <nav>
+    <div class='row'>
+      <div class='col-sm-6'>
+        <div class='card'>
+          <div class='card-body'>
+            <h5 class='card-title'>We think you should receive the next
+              screenings:</h5>
+            {{#each screenings}}
+              <p class='card-text'>{{needed_screening}}</p>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+      <div class='col-sm-6'>
+        <div class='card'>
+          <div class='card-body'>
+            <h5 class='card-title'>We think you should receive the next
+              vaccinations:</h5>
+            {{#each screenings}}
+              <p class='card-text'>{{needed_vaccination}}</p>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <br /><br />
+  <nav>
+    <div class='card w-75'>
+      <div class='card-body'>
+        <h5 class='card-title'>Here's a helpful description:</h5>
+        <p class='card-text'>${description}</p>
+        <a href='https://www.google.com' class='btn btn-primary'>More Info</a>
+      </div>
+    </div>
+  </nav>
+</nav>
+>>>>>>> main
