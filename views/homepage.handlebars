@@ -1,7 +1,7 @@
 <nav class="profileBody">
     <h1> Welcome! {{name}}</h1>
     <br>
-    <h2>Given you're ${age} years old and you're a {{gender}}</h2>
+    <h2>Given you're {{age}} years old and you're a {{sex}}</h2>
     <br>
         <nav>
             <div class="row">
@@ -9,7 +9,7 @@
                   <div class="card">
                     <div class="card-body">
                       <h5 class="card-title">We think you should receive the next screenings:</h5>
-                      {{#each screenings}}
+                      {{#each Screenings}}
                       <p class="card-text">{{needed_screening}}</p>
                       {{/each}}
                     </div>
@@ -19,7 +19,7 @@
                   <div class="card">
                     <div class="card-body">
                       <h5 class="card-title">We think you should receive the next vaccinations:</h5>
-                      {{#each screenings}}
+                      {{#each Screenings}}
                       <p class="card-text">{{needed_vaccination}}</p>
                       {{/each}}
                     </div>
@@ -29,6 +29,7 @@
         </nav>
         <br><br>
         <nav>
+          {{#each Screenings}}
             <div class="card w-75">
                 <div class="card-body">
                   <h5 class="card-title">Here's a helpful description:</h5>
@@ -36,6 +37,7 @@
                   <a href="https://www.google.com" class="btn btn-primary">More Info</a>
                 </div>
               </div>
+          {{/each}}  
         </nav>
 </nav>
 
