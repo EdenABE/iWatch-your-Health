@@ -3,21 +3,21 @@
     "name": "Eden",
     "email": "eden@hotmail.com",
     "password": "password12345",
-    "age": 45,
-    "sex": "F"
+    "Age": "45",
+    "Sex": "F"
   },
   {
     "name": "Daniel",
     "email": "daniel@gmail.com",
     "password": "password12345",
-    "age": 23,
-    "sex": "M"
+    "Age": "50",
+    "Sex": "M"
   },
   {
     "name": "Andrew",
     "email": "andrew@aol.com",
     "password": "password12345",
-    "age": 65,
-    "sex": "M"
+    "Age": "65",
+    "Sex": "M"
   }
 ]
