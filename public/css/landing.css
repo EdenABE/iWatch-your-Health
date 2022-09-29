@@ -1,0 +1,22 @@
+.fullscreen {
+  width: 100%;
+  height: 5vh;
+  padding: 50vh;
+}
+
+.a {
+  background: url('/pictures/Capture-landing.PNG') center/cover;
+  opacity: 0.4;
+}
+
+.move {
+  color: rgb(9, 16, 10);
+  font-family: cursive;
+  font-style: italic;
+  font-weight: 1000;
+  font-size: bolder;
+}
+
+.font-effect-outline {
+  font-size: xx-large;
+}
