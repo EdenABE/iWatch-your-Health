@@ -3,8 +3,9 @@
 An easy*to*use website to see and understand all your health*related questions... personalized for you!!
 
 ## Heroku Link
+https://afternoon-gorge-92295.herokuapp.com/
 
-## Proyect's Description
+## Project's Description
 
 This application takes input from the user directly from the signup page regarding their age and gender. It will later display the homepage, in which, after a greeting to the user, display the medical screenings they should get by the age they are on and their gender, as well as recomended vaccination. 
 
