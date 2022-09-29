@@ -20,7 +20,7 @@ This application takes input from the user directly from the signup page regardi
 
 ## Challenges
 
-Most of the confussion came with the routing, which after some thorough work and research the confussion dissipated some. 
+Most of the confusion came with the routing, which after some thorough work and research the confusion cleared some. 
 
 ## How to install and run the prokect
 
