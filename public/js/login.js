@@ -17,7 +17,7 @@ const loginFormHandler = async (event) => {
       // If successful, redirect the browser to the profile page
       window.location.replace('/profile');
     } else {
-      document.location.replace('api/users/signup');
+      document.location.replace('/signup');
     }
   }
 };
